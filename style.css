@@ -29,6 +29,7 @@ footer {
   padding-bottom: 50px;
 }
 .container {
+  padding: 0 10px;
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
@@ -164,4 +165,42 @@ footer p {
 }
 .pagination li.active_li {
   background-color: red;
+}
+
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 990px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 740px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .modal_window .row {
+    flex-direction: column;
+  }
+  .modal_wraper {
+    height: 600px;
+    overflow-y: auto;
+  }
+  .info img {
+    display: block;
+    margin: 0 auto 20px auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .grid {
+    display: block;
+  }
+  .card {
+    margin: 10px auto;
+  }
 }
