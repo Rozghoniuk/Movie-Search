@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+header,
+footer {
+  background-color: cornflowerblue;
+  padding: 20px 0;
+}
+.result .spinner {
+  position: absolute;
+  top: 100px;
+  left: calc(50% - 125px);
+  width: 250px;
+  height: auto;
+}
+.wrapper {
+  position: relative;
+  min-height: calc(100vh - 60px);
+  padding-bottom: 50px;
+}
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header_logo {
+}
+.header_seach button,
+.header_seach input {
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.result {
+}
+.grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  padding: 30px 0;
+}
+.card {
+  width: 230px;
+  height: 300px;
+  border: 1px solid grey;
+  padding: 5px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.card_img {
+  width: 100%;
+  height: 200px;
+  cursor: pointer;
+  overflow: hidden;
+  text-align: center;
+}
+
+.card_img img {
+  height: 100%;
+  width: auto;
+}
+.card h5,
+.card p {
+  cursor: pointer;
+}
+
+.card h5:hover,
+.card p:hover {
+  text-decoration: underline;
+}
+
+.pagination {
+  position: absolute;
+  bottom: 20px;
+  width: 320px;
+  left: calc(50% - 160px);
+}
+
+.pagination ul {
+  list-style: none;
+  cursor: pointer;
+  justify-content: center;
+  gap: 15px;
+}
+
+.pagination li {
+  border: 1px solid #000;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  background-color: cornflowerblue;
+}
+footer p {
+  text-align: center;
+}
+.modal {
+  position: fixed;
+  background: #000000a4;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.modal_window {
+  position: relative;
+  background-color: cornflowerblue;
+  max-width: 750px;
+  width: 100%;
+  height: auto;
+  margin: 80px auto 0 auto;
+  padding: 50px 20px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 50px black;
+}
+.modal_close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 28px;
+}
+.modal_wraper .row {
+  align-items: flex-start;
+}
+.modal_wraper .spinner {
+  display: block;
+  margin: 0 auto;
+}
+.info_main ul {
+  list-style: none;
+  font-size: 16px;
+  line-height: 32px;
+}
+.info_main h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.info img {
+  width: 250px;
+  height: auto;
+}
+.info_plot {
+  padding-top: 20px;
+  font-size: 16px;
+  line-height: 30px;
+}
+.pagination li.active_li {
+  background-color: red;
+}
