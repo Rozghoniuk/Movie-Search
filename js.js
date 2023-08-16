@@ -41,8 +41,10 @@ function getData(api, key, value, page) {
 let input = document.querySelector('input');
 let button = document.querySelector('button');
 let searchValue;
+let form = document.querySelector("form");
 
-button.addEventListener('click', () => { 
+form.addEventListener('submit', (ev) => { 
+  ev.preventDefault();
   if (input.value) {
     input.placeholder = " Enter movie name";
     input.style.border = "none";
@@ -84,7 +86,7 @@ arr.forEach(element => {
 let ul = document.querySelector(".pagination ul");
 
 ul.addEventListener("click", (ev) => { 
-  if (ev.target.tagName === "LI") { 
+  if (ev.target.matches("li:not(.active_li)")) { 
     currentPage = +ev.target.innerText;
     ul.innerHTML = "";
     getData(API, KEY, searchValue, currentPage);
